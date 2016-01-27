@@ -1,0 +1,1 @@
+curl -i -XPOST --data @null.json -H "Content-Type: application/json" http://localhost:8080/aqueryum-show-query/resources/dancer/find

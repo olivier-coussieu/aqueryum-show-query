@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="main">
+  		<div ng-include="'view/search.html'"></div>
+  		<br />
+		<div class="span10" ng-controller="DancerListCtrl">
+			<h3>Query {{ result.request }}</h3>
+<!-- 			<textarea class="span10" type="text" ng-model="query" ng-readonly="true"></textarea> -->
+			<input class="span10" type="text" ng-model="result.request" />
+		</div>
+    </div>
+</div>

@@ -1,0 +1,1 @@
+curl http://localhost:8080/nsi-web/mask/LEONARD/JOCONDE
