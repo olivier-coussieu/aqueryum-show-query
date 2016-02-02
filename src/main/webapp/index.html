@@ -11,15 +11,8 @@
 	<!-- Libraries -->
 	<script type="text/javascript" src="js/lib/angular.min.js"></script>
 	<script type="text/javascript" src="js/lib/angular-route.min.js"></script>
-	<script type="text/javascript" src="js/lib/angular-animate.min.js"></script>
 	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
-	<script type="text/javascript" src="js/lib/ng-grid.min.js"></script>
-	<script type="text/javascript" src="js/lib/bootstrap-datepicker.js"></script>
-	<script type="text/javascript" src="js/lib/jquery.autocomplete.js"></script>
 	<script type="text/javascript" src="js/lib/bootstrap.js"></script>
-	<script type="text/javascript" src="js/lib/moment.js"></script>
-<!-- 	<script src="js/angular/angular.js"></script> -->
-<!-- 	<script src="js/angular/angular-route.js"></script> -->
 	<!-- /Libraries -->
 	
 	<!-- Application -->
@@ -28,7 +21,6 @@
 	<script type="text/javascript" src="js/common/main.js"></script>
 	<script type="text/javascript" src="js/common/service.js"></script>
 	<script type="text/javascript" src="js/common/directives.js"></script>
-	<script type="text/javascript" src="js/common/utils.js"></script>
 	<!-- /common -->
 	<script src="js/app/controllers.js"></script>
 	<script src="js/app/services.js"></script>
@@ -39,7 +31,6 @@
 	<!-- *** CSS *** -->
 	<link href="https://fonts.googleapis.com/css?family=Sancreek" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="css/zencontact.css" rel="stylesheet" media="screen">
 </head>
 
 <body data-ng-app="aShowQApp">
@@ -51,19 +42,10 @@
 	                <li data-ng-class="{active: location.path() == '/list'}">
 	                    <a href="#/list">Select Dancers</a>
 	                </li>
-<!-- 	                <li data-ng-class="{active: location.path().indexOf('/edit') == 0}"> -->
-<!-- 	                    <a href="#/edit">Add new dancer</a> -->
-<!-- 	                </li> -->
 	            </ul>
 	        </div>
-	    </div>
-	<!--     <div ng-controller="HomeCtrl"> -->
-	<!-- 		<container name="header"></container> -->
-	<!-- 		<div ng-view></div> -->
-	<!-- 	</div> -->
-	    
+	    </div>	    
 	</div>
-	
 	<div data-ng-view></div>
 </body>
 </html>
