@@ -9,7 +9,7 @@ import aqueryum.translaters.JpqlJointures;
 
 public enum DancersPathFinder implements PathFinder {
 
-	hair_color			("dancer"	, "hairColor"	, " "						, " "),	
+	hair_color			("dancer"	, "hairColor"	, ""						, ""),	
 	specialSign_type	("specialSign"	, "type"	, ", SpecialSign specialSign", " AND specialSign.owner = dancer.id"),	
 	specialSign_location("specialSign"	, "location", ", SpecialSign specialSign", " AND specialSign.owner = dancer.id"),	
 	garter_color		("garter"		, "color"	, ", Garter garter"			, " AND garter.owner = dancer.id");	

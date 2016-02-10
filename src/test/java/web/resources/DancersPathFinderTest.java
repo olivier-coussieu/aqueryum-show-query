@@ -69,7 +69,7 @@ public class DancersPathFinderTest {
 	@Test
 	public void analyse() {
 		Prescriptions BOTH 	= buildPrescriptions(FRECKLES_CRIT, CENSORED_CRIT);
-	   	String expected = "specialSign.type = 'freckles' AND specialSign.location = 'censored' AND specialSign.owner = dancer.id"; 
+	   	String expected = "specialSign.type = 'freckles' AND specialSign.location = 'censored'"; 
 		String obtained = BOTH.filters(FACTORY);    
 		assertNotNull	("BOTH.filters(FACTORY) NULL", obtained);
 		assertEquals	("BOTH.filters(FACTORY) KO", expected, obtained);
