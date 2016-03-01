@@ -33,6 +33,8 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 @Path("dancer")
 public class DancerResource {
 
+	private static final JpqlPrescriptionsTranslater JPQL_PRESCRIPTIONS_TRANSLATER = new JpqlPrescriptionsTranslater(new DancersPathFinder.Factory());
+
 	@GET
 	@Produces("text/plain")
 	public String hello() {
@@ -50,11 +52,10 @@ public class DancerResource {
 					       .type(MediaType.TEXT_PLAIN)
 					       .build();
 		}
-		JpqlPrescriptionsTranslater sut = new JpqlPrescriptionsTranslater(new DancersPathFinder.Factory());
 		Gson gson = new GsonBuilder().registerTypeAdapter(FilterFactory.class, new SearchJsonDeserializer()).create();
 		Prescriptions prescriptions = gson.fromJson(criteria, Prescriptions.class);
 		String items =  "SELECT dancer.name FROM Dancer dancer" 
-					+ sut.translate(prescriptions, true);    
+					+ JPQL_PRESCRIPTIONS_TRANSLATER.translate(prescriptions, true);    
 		ResponseBuilder response = (items != null) ? Response.status(OK).entity(items) : Response.status(NOT_FOUND);
 		return response.build();
 	}
